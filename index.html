@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        color_1: "#3B8EEA",
+                        color_2: "#A5D2FF",
+                        white: "#fff",
+                        black: "#000",
+                        bg: "#fcfcfc"
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Doraschool</title>
+</head>
+
+<body class="bg-bg">
+    <!-- nav -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 shadow-sm">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+            Icon when menu is closed.
+
+            Heroicon name: outline/bars-3
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+            Icon when menu is open.
+
+            Heroicon name: outline/x-mark
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="block h-8 w-auto lg:hidden" src="./assets/logo.jpg" alt="Doraschool" />
+                        <img class="hidden h-8 w-auto lg:block" src="./assets/logo.jpg" alt="Doraschool" />
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-black" -->
+                            <a href="#" class="bg-color_1 text-white px-3 py-2 rounded-md text-sm font-medium menu-item"
+                                aria-current="page">Accueil</a>
+
+                            <a href="#avantages"
+                                class=" px-3 py-2 rounded-md text-sm font-medium menu-item">Avantages</a>
+
+                            <a href="#equipe" class=" px-3 py-2 rounded-md text-sm font-medium menu-item">Notre
+                                équipe</a>
+
+                            <a href="#contact" class=" px-3 py-2 rounded-md text-sm font-medium menu-item">Contacts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <a href="#" class="bg-color_1 text-white block px-3 py-2 rounded-md text-base font-medium shadow-lg"
+                        aria-current="page">Télécharger</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-black" -->
+                <a href="#" class="bg-color_1 text-white block px-3 py-2 rounded-md text-base font-medium menu-item"
+                    aria-current="page">Accueil</a>
+
+                <a href="#avantages" class=" block px-3 py-2 rounded-md text-base font-medium menu-item">Avantages</a>
+
+                <a href="#equipe" class="block px-3 py-2 rounded-md text-base font-medium menu-item">Notre équipe</a>
+
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium menu-item">Contacts</a>
+            </div>
+        </div>
+    </nav>
+    <!-- nav -->
+
+
+
+    <!-- hero -->
+    <!-- ====== Hero Section Start -->
+    <div class="relative pt-[120px] lg:pt-[150px] pb-[110px] bg-white">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-5/12 px-4">
+                    <div class="hero-content">
+                        <h1 class="
+                  text-dark
+                  font-bold
+                  text-4xl
+                  sm:text-[42px]
+                  lg:text-[40px]
+                  xl:text-[42px]
+                  leading-snug
+                  mb-3
+                ">
+                            Desormais,<br> soyez au meme niveau d'information que votre enfant a l'école
+
+                        </h1>
+                        <p class="text-base mb-8 text-body-color max-w-[480px]">
+                            L'application<br> Dora School et suivez vos enfants a l'école
+
+                        </p>
+                        <ul class="flex flex-wrap items-center">
+
+                            <li>
+                                <a href="javascript:void(0)" class="
+                      py-4
+                      px-6
+                      sm:px-10
+                      lg:px-8
+                      xl:px-10
+                      inline-flex
+                      items-center
+                      justify-center
+                      text-center text-white text-base
+                      bg-color_1
+                      hover:bg-opacity-90
+                      font-normal
+                      rounded-lg
+                    ">
+                                    <span class="mr-2">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="11" cy="11" r="11" fill="#3056D3" />
+                                            <rect x="6.90906" y="13.3636" width="8.18182" height="1.63636"
+                                                fill="white" />
+                                            <rect x="10.1818" y="6" width="1.63636" height="4.09091" fill="white" />
+                                            <path d="M11 12.5454L13.8343 9.47726H8.16576L11 12.5454Z" fill="white" />
+                                        </svg>
+                                    </span>
+                                    Téléchargez maintenant
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:w-1/12 px-4"></div>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="lg:text-right lg:ml-auto">
+                        <div class="relative inline-block z-10 pt-11 lg:pt-0">
+                            <img src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png" alt="hero"
+                                class="max-w-full lg:ml-auto" />
+                            <span class="absolute -left-8 -bottom-8 z-[-1]">
+                                <svg width="93" height="93" viewBox="0 0 93 93" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
+                                    <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== Hero Section End -->
+    <!-- hero -->
+
+
+
+
+
+
+
+    <!-- about -->
+    <section class="bg-bg">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900">Pourquoi DORA SCHOOL ?</h2>
+            <div class="sm:text-lg w-full flex flex-col  ">
+                <p class="single-faq mb-2 w-full rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8  ">M. Yao était un parent très impliqué dans la vie scolaire de sa fille,
+                    Audrey. Il lui offrait tous les moyens pour réussir,
+                    en lui achetant des livres et des manuels et en l'encourageant
+                    à travailler dur. Malheureusement,
+                    malgré tous ses efforts,
+                    Audrey a échoué sa terminale et n'a pas pu intégrer
+                    l'université de ses rêves.</p>
+                <p class="single-faq mb-2 w-full rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 ">M. Yao a été dévasté par cet échec. Il a réalisé
+                    qu'il n'avait pas été assez vigilant quant aux comportements de Audrey et qu'il n'avait
+                    pas réussi à contrôler les performances scolaire de sa fille en raison
+                    de manque de temps. En réalité, Audrey faisait l'école buissonnière et passait son temps
+                    à faire d'autres activités, ce qui entraînait des absences
+                    répétées et de mauvaises notes dans toutes les matières.</p>
+                <p class="single-faq mb-2 w-full rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 ">M. Yao s'est senti responsable de l'échec de sa fille et a décidé de
+                    trouver une solution pour que cela ne se reproduise pas avec d'autres
+                    parents et enfants. Inspiré par sa propre expérience, il s'est mis à la
+                    recherche d'une équipe compétente pour résoudre ce problème universel.
+                    L'équipe idéale s'est avérée être celle de SC DIGITAL. Ensemble, nous avons décidé de
+                    développer une application de suivi scolaire personnalisée.
+                    Nous avons travaillé dur pendant deux ans pour créer cette application qui permet aux parents de
+                    suivre le progrès de
+                    leurs enfants et de recevoir
+                    des notifications de présence en temps réel.</p>
+                <p class="single-faq mb-2 w-full rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 ">Grâce à notre application, nous avons aidé de nombreux parents à
+                    s'assurer que leurs enfants vont réellement en classe et atteignent leurs
+                    objectifs scolaires. Nous avons reçu de nombreux témoignages de parents reconnaissants
+                    qui ont vu leurs enfants réussir grâce à notre application. Nous sommes devenus une
+                    source d'inspiration pour ceux qui veulent s'assurer que leurs enfants réussissent et
+                    avons montré qu'il est possible de se relever et de réussir, même après un échec.</p>
+
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+
+
+
+    <!-- team -->
+    <section class="bg-white" id="equipe">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">Notre équipe</h2>
+          <p class="font-light text-gray-500 sm:text-xl ">Des experts pour vous guider.</p>
+      </div> 
+      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
+                  <a href="#">SEKOU KONATE</a>
+              </h3>
+              <p>CO-FONDATEUR ET GROWTH HACKER</p>
+              
+          </div>
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt="Helene Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <a href="#">YAO JULES</a>
+              </h3>
+              <p>CO-FONDATEUR ET CONSEILLER SCOLAIRE</p>
+              
+          </div>
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
+                  <a href="#">YAYA MOHAMED</a>
+              </h3>
+              <p>DEVELOPPEUR FULL-STACK</p>
+              
+          </div>
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
+                  <a href="#">ISSA SAWADOGO</a>
+              </h3>
+              <p>DEVELOPPEUR BACK-END</p>
+              
+          </div>
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <a href="#">ZEBEYOU ANGE</a>
+              </h3>
+              <p>DESIGNER</p>
+              
+          </div>
+          <div class="text-center text-gray-500 ">
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png" alt="Leslie Avatar">
+              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
+                  <a href="#">AKANBI GISELE</a>
+              </h3>
+              <p>DEVELOPPEUSE FRONT-END</p>
+          </div>
+      </div>  
+  </div>
+</section>
+    <!-- team -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
